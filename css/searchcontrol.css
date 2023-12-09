@@ -1,0 +1,59 @@
+.searchcontrol {
+    border: var(--halfpixel) var(--line_style) var(--color_lines);
+    padding-right: 1px;
+    background-color: color-mix(in oklab, var(--color_body_back), var(--color_bars_back) 15%);
+    border-radius: var(--border-radius);
+    position: relative;
+    display: flex;
+}
+
+.searchcontrol INPUT {
+    background-color: transparent;
+    position: relative;
+    color: var(--color_font);
+    transition: background-color .2s;
+    border-radius: var(--border-radius);
+    border: 0;
+    font-size: 11pt;
+    margin-right: 0;
+    font-family: var(--font_family);
+    padding-left: 8px;
+}
+
+.searchcontrol INPUT:focus {
+    background-color: var(--lighter_translucent_40);
+    border: 0;
+}
+
+.clearinput {
+    position: absolute;
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    border: var(--halfpixel) var(--line_style) var(--transparent);
+    border-left: var(--halfpixel) var(--color_lines) dashed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    left: calc(100% - 29px);
+    text-align: center;
+    line-height: 31px;
+    font-size: 28px;
+    color: var(--color_font);
+    background: var(--icon_cross_small) center no-repeat;
+    opacity: .7;
+}
+
+.clearinput:hover {
+    cursor: pointer;
+    background-color: var(--color_ui_hover_back);
+    opacity: 1;
+}
+
+.clearinput:active {
+    background-color: var(--color_ui_active);
+    transition: .3s background;
+}
+
+/* form input elements */
+*:focus {
+    outline: none;
+}

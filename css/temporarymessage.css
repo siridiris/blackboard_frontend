@@ -1,0 +1,18 @@
+.temporarymessage {
+    position: fixed;
+    font-size: unset;
+    background: var(--color_body_back);
+    font-weight: bold;
+    margin: auto;
+    right: 32px;
+    bottom: -2px;
+    padding: 8px 16px;
+    z-index: 100;
+    white-space: pre-line;
+    border-radius: 8px 8px 0 0;
+    color: var(--color_font);
+    font-family: inherit;
+    border: 1px solid var(--color_lines);
+    filter: drop-shadow(0 0 2px var(--color_lines)) brightness(1.12);
+    font-size: 14pt;
+}

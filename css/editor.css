@@ -1,0 +1,105 @@
+.dialogwindow {
+    position: fixed;
+    left: 100px;
+    top: 100px;
+    background-color: var(--color_bars_back);
+    border: 1px var(--line_style) var(--color_lines);
+    border-radius: var(--border-radius);
+    z-index: 2;
+    display: none;
+    filter: brightness(1.25) drop-shadow(0 0 3px black);
+    background: color-mix(in oklab, var(--color_body_back), black 7%);
+    outline: 2px solid var(--color_bars_back);
+    resize: both;
+    overflow: auto;
+    flex-direction: column;
+    min-height: 320px;
+    min-width: 670px;
+    height: 640px;
+}
+
+.dialogwindow .titlebar:active {
+    cursor: grabbing;
+}
+
+.dialogwindow .titlebar {
+    padding: 8px 16px 0;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.editor {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 8px;
+    height: inherit;
+}
+
+.editor input,
+.editor textarea {
+    padding: 12px;
+    background: color-mix(in oklab, var(--color_body_back) 90%, white);
+    color: var(--color_font);
+    border: var(--halfpixel) var(--line_style) black;
+    scrollbar-color: var(--color_lines) var(--transparent);
+    display: flex;
+    border-radius: var(--border-radius);
+}
+
+.editor textarea {
+    border: 0;
+    margin-top: 0px;
+    line-height: 20px;
+    flex: 1;
+    resize: none;
+    background: silver;
+}
+
+.editor input:read-only {
+    display: none;
+    /* position: absolute; */
+    opacity: .5;
+    text-align: right;
+    background: transparent;
+    border: 0;
+}
+
+.editor input {
+    background: silver;
+    border-width: 0;
+    font-size: 12pt;
+    font-family: monospace;
+    border-style: solid;
+    padding: 4px 12px;
+    color: var(--color_font);
+}
+
+.editor .toolbar {
+    margin-top: -1px;
+}
+
+.editor input.link {
+    border-width: 1px 0 0 0;
+}
+
+.editor .toolbar {
+    background-color: transparent;
+    border: 0;
+}
+
+.editor .idlabel {
+    position: absolute;
+    right: 42px;
+    top: 48px;
+    width: 50px;
+    height: 9px;
+    display: none;
+    /*flex*/
+    align-items: center;
+    opacity: .35;
+    border-radius: 4px;
+    justify-content: end;
+    font-weight: bold;
+    padding: 4px;
+}

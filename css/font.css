@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'varela_roundregular';
+    src: url('../font/VarelaRound-Regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LotusCoder-Regular';
+    src: url('../font/Lotuscoder-0WWrG.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

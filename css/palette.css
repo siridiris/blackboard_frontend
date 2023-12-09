@@ -1,0 +1,56 @@
+.paletteitems {
+    width:100%;
+}
+
+.paletteitem {
+    display: inline-block;
+    padding: 4px 4px 0 4px;
+    width: 136px;
+    white-space: nowrap;
+    margin: 0 4px 4px 0;
+    border-radius: var(--border-radius);
+    z-index: 100;
+}
+
+.paletteitem .color {
+    display: inline-block;
+    border: var(--halfpixel) var(--line_style) var(--color_lines);
+    width: 20px;
+    height: 20px;
+    border-radius: var(--border-radius);
+    background: var(--pattern_blocks);
+    background-repeat: repeat-y;
+    background-position: 0;
+}
+
+.paletteitem .paletteitemname {
+    display: inline;
+    position: relative;
+    padding-left: 4px;
+    font-size: small;
+    white-space: nowrap;
+    top: -6px;
+}
+
+.paletteitem .colorcode {
+    display: inline-block;
+    padding-left: 8px;
+    position: relative;
+    top: -2px;
+}
+
+.reportpalette {
+    position: absolute;
+    border-radius: 4px;
+    right: 20px;
+    bottom: 20px;
+    width: 320px;
+    height: 220px;
+    background: var(--color_body_back);
+    padding: 4px;
+    border: var(--halfpixel) var(--line_style) var(--color_lines);
+    z-index: 3;
+    font-size: small;
+    padding: 8px;
+    color: var(--color_font);
+}

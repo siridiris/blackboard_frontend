@@ -1,0 +1,26 @@
+.itemlistcontainer {
+    position: absolute;
+    top: 46.5px;
+    bottom: 28px;
+    right: 0;
+    left: 0;
+    overflow-y: auto;
+    scrollbar-color: var(--color_lines) var(--transparent);
+    background: var(--color_body_back);
+    
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.itemlistcontainer .itemlist {
+    column-count: var(--numberofcolumns);
+    padding: 8px 24px;
+    margin: 0px;
+    column-fill: balance;
+    column-rule: var(--halfpixel) dashed var(--color_lines);
+}

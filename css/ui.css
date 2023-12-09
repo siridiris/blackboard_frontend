@@ -1,0 +1,29 @@
+
+
+.closecross {
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    right: 4px;
+    line-height: 8px;
+    border: var(--halfpixel) solid transparent;
+    background-image: var(--icon_cross);
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-right: 8px;
+}
+
+.favourite-on:hover,
+.closecross:hover {
+    background-color: var(--transparent);
+}
+.itemlistcontainer .itemlist .item .closecross:hover,
+.listmanager .subtitle.item .closecross:hover,
+.listmanager .favourite-on:hover {
+    /* background-color: color-mix(in oklab, black 25%, var(--color_bars_back)); */
+    background-color: color-mix(in oklab, transparent 50%, var(--color_error));
+}

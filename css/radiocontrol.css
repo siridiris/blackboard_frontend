@@ -1,0 +1,120 @@
+.radiocontrolparent {
+    display: flex;
+}
+
+.radiocontrolparent:hover .radiocontrol{
+    padding: 4px;
+}
+
+.radiocontrolparent:hover {
+    background-color: color-mix(in oklab, black 5%, transparent);
+    border-radius: var(--border-radius);
+}
+
+.radiocontrolparent .radiocontrol {
+    gap: 4px;
+}
+
+.radiocontrolparent .radiocontrol .option {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.radiocontrolparent .radiocontrol .option.selected {
+    display: flex;
+    background-color: var(--transparent);
+    justify-content: center;
+    align-items: center;
+    color: var(--color_ui_select_fore);
+    opacity: .7;
+    cursor: default;
+}
+
+.radiocontrolparent:hover .radiocontrol .option {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.radiocontrolparent:hover .radiocontrol .option:hover {
+    background-color: var(--color_ui_hover_back);
+}
+
+.radiocontrolparent:hover .radiocontrol .option.selected {
+    opacity: 1;
+    background-color:var(--color_ui_select_back);
+}
+
+.radiocontrolparent:hover .option {
+    display: flex;
+    cursor: pointer;
+}
+
+.radiocontrolparent .option.selected:hover {
+    opacity: 1;
+    background-color: var(--color_ui_select_back);
+}
+
+.radiocontrolparent:hover .option {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: normal;
+    justify-content: center;
+    align-items: center;
+}
+
+.radiolabel {
+    cursor: default;
+    opacity: .75;
+    display: flex;
+    padding: 8px 0;
+}
+
+.radiocontrol {
+    display: flex;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+    /* border: var(--halfpixel) var(--line_style) var(--color_lines); */
+    justify-content: space-between;
+    gap: 1px;
+    font-size: 10pt;
+}
+
+.radiocontrol .option {
+    padding: 8px;
+    white-space: nowrap;
+    border-radius: var(--border-radius);
+    border: var(--halfpixel) solid var(--transparent);
+    line-height: 0;
+}
+
+.radiocontrolparent.fontsizecontrol,
+.radiocontrolparent.themes {
+    background-repeat: no-repeat;
+    background-position: 8px center;
+}
+
+.radiocontrolparent.fontsizecontrol:hover {
+    padding-left: 0;
+    background-image:none;
+
+}
+
+.radiocontrolparent.fontsizecontrol:hover .radiocontrol,
+.radiocontrolparent.themes:hover .radiocontrol {
+    display: flex;
+}
+.radiocontrolparent.searchby:hover .radiocontrol {
+    display: flex;
+}
+.radiocontrolparent.searchby .radiocontrol .option.selected {
+    display: flex;
+    margin: 0;
+}
+.radiocontrolparent.searchby .radiocontrol .option.selected {
+    display: flex;
+    margin: 4px;
+}
+

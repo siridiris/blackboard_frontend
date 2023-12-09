@@ -1,0 +1,39 @@
+.tooltip {
+    border: var(--halfpixel) solid var(--color_font);
+    color: var(--color_ui_select_fore);
+    background-color: var(--color_body_back);
+    position: absolute;
+    border-radius: var(--border-radius);
+    display: none;
+    font-size: 1.0em;
+    filter: drop-shadow(0rem 0rem 0.2rem var(--color_font)) brightness(1.1);;
+}
+
+.tooltip .inner {
+    padding: 8px;
+    background-color: color-mix(in oklab, var(--color_bars_back), var(--color_active) 50%);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltip .maintip {
+    white-space: nowrap;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.tooltip .subtip {
+    opacity: .9;
+    font-size: .8em;
+    line-height: 16px;
+}
+
+.tooltip .shortcut {
+    opacity: .6;
+    font-size: .8em;
+    text-align: right;
+    border-top: var(--halfpixel) dotted var(--color_body_back);
+    font-style: italic;margin-right: 4px;
+
+}

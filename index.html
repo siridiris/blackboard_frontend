@@ -1,0 +1,72 @@
+<!-- Ivo Diris (c) -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blackboard MAVEN by Diris</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <link rel="icon" href="./favicon.png" />
+
+    <link rel="stylesheet" type="text/css" href="css/parts.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" href="css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="css/root.css" />
+    <link rel="stylesheet" type="text/css" href="css/font.css" />
+    <link rel="stylesheet" type="text/css" href="css/toolbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/itemlistcontainer.css" />
+    <link rel="stylesheet" type="text/css" href="css/item.css" />
+    <link rel="stylesheet" type="text/css" href="css/blackboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/searchcontrol.css" />
+    <link rel="stylesheet" type="text/css" href="css/radiocontrol.css" />
+    <link rel="stylesheet" type="text/css" href="css/statusbar.css" />
+    <link rel="stylesheet" type="text/css" href="css/fullscreen.css" />
+    <link rel="stylesheet" type="text/css" href="css/ui.css" />
+    <link rel="stylesheet" type="text/css" href="css/ui.config.css" />
+    <link rel="stylesheet" type="text/css" href="css/temporarymessage.css" />
+    <link rel="stylesheet" type="text/css" href="css/effects.css" />
+    <link rel="stylesheet" type="text/css" href="css/tooltip.css" />
+    <link rel="stylesheet" type="text/css" href="css/listmanager.css" />
+    <link rel="stylesheet" type="text/css" href="css/dropdown.css" />
+    <link rel="stylesheet" type="text/css" href="css/bin.css" />
+    <link rel="stylesheet" type="text/css" href="css/editor.css" />
+
+    <script type="text/javascript" language="JavaScript" src="js/app.shell.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/button.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/curriculum.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/statusbar.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/toolbar.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/radiocontrol.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/searchcontrol.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/listmanager.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/dropdown.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/bin.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/editor.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/tooltip.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/page.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/temporary.message.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/app.support.functions.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/list.js"></script>
+    <script type="text/javascript" language="JavaScript" src="js/codetext.analyser.js"></script>
+
+    <script type="text/javascript" language="JavaScript">
+        let root = document.documentElement;
+        const HOST = "http://localhost:8085/";
+        onload = async function () {
+            console.log(HOST+"allepaginas");
+            const response = await fetch(HOST+"allepaginas");
+            const data = await response.json()
+                .then((data) => {
+                    new AppShell(data);
+                });
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>

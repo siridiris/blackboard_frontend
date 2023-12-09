@@ -1,0 +1,31 @@
+.bin {
+    display: block;
+
+    position: fixed;
+    right: 24px;
+    bottom: 32px;
+    width: 120px;
+    height: 140px;
+    z-index: 100;
+    background-image: var(--icon_bitbin);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    filter: drop-shadow(0 0 1px dimgray);
+}
+
+.bin.appear,
+.temporarymessage.appear {
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.bin.disappear,
+.temporarymessage.disappear {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.bin.dragover {
+    background-image: var(--icon_bitbin_lid_opened);
+}

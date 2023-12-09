@@ -1,0 +1,19 @@
+/* Chrome, Safari and Opera syntax */
+:-webkit-full-screen {
+    background: var(--color_body_back) ;
+}
+
+/* Firefox syntax */
+:-moz-full-screen {
+    background: var(--color_body_back) ;
+}
+
+/* IE/Edge syntax */
+:-ms-fullscreen {
+    background: var(--color_body_back) ;
+}
+
+/* Standard syntax */
+:fullscreen {
+    background:  var(--color_body_back);
+}

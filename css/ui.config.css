@@ -1,0 +1,88 @@
+#uiconfig {
+    position: absolute;
+    left: var(--uiconfigx);
+    top: var(--uiconfigy);
+    background-color: var(--color_body_back);
+    border-radius: var(--border-radius);
+    z-index: 10000;
+    display: none;
+    visibility: visible;
+    filter: brightness(1.14);
+    min-width: 360px;
+  height: 500px;
+}
+
+#uiconfig .panel .radiocontrolparent {
+    display: flex;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+#uiconfig .panel {
+    padding: 16px;
+    border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+#uiconfig .panel .radiocontrolparent .radiolabel {
+    display: flex;
+    min-width: 90px;
+}
+
+#uiconfig .titlebar:active {
+    cursor: grabbing;
+}
+
+#uiconfig .titlebar {
+    padding: 6px 8px 6px 37px;
+    background-image: var(--icon_config);
+    background-position: 7px center;
+    background-repeat: no-repeat;
+}
+
+#uiconfig .titlebar .closecross {
+    cursor: pointer;
+    padding: 2px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    text-align: center;
+    right: 4px;
+    line-height: 8px;
+    border: var(--halfpixel) solid transparent;
+    background: var(--icon_cross) center no-repeat;
+    margin-right: 2px;
+}
+
+.tweakspanel {
+    border: var(--halfpixel) var(--line_style) var(--color_lines);
+    border-radius: var(--border-radius);
+    padding: 16px;
+    background: var(--lighter_translucent_10);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: var(--color_body_back);
+    left: 30px;
+    top: 110px;
+    border-radius: var(--border-radius);
+    width: 200px;
+    position: absolute;
+    z-index: 10;
+    filter: drop-shadow(0 0 2px black) brightness(1.1);
+}
+
+button {
+    border: var(--halfpixel) solid var(--color_lines);
+    border-radius: var(--border-radius);
+    padding: 8px;
+    background: var(--color_bars_back);
+    margin-top: 6px;
+}
+
+.babydragons {
+    color: var(--color_error);
+    font-style: italic;
+    padding: 0 0 12px 4px;
+}

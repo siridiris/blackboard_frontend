@@ -1,0 +1,112 @@
+
+.toolbar {
+    border-bottom: var(--halfpixel) var(--line_style) var(--color_lines);
+    padding: 6px;
+    background: var(--color_bars_back);
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.toolbar .towerbutton {
+    background-color: var(--transparent);
+    border-color: var(--transparent);
+}
+
+.toolbar>DIV:nth-child(1),
+.toolbar>DIV:nth-child(2),
+.toolbar>DIV:last-child {
+    white-space: nowrap;
+     /*  outline: 1px dashed teal;  */
+    display: flex;
+    transition-duration: 0.5s;
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.toolbar>DIV:first-child {
+    opacity: 1;
+    justify-content: flex-start;
+    flex: 1;
+}
+.toolbar>DIV:first-child .separator {
+    display: none;
+}
+.toolbar>DIV:hover .separator,
+.toolbar>DIV:hover .radiocontrolparent.themes{
+    display: flex;
+}
+
+/* .toolbar > DIV:hover .radiocontrolparent.themes:hover
+{
+display: flex;
+  padding-left: 0;
+  background-image: none;
+} */
+
+.toolbar>DIV:nth-child(2) {
+    /* middle panel */
+    justify-content: flex-end;
+    padding-right: 8px;
+}
+
+.toolbar>DIV:nth-child(2) DIV * {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* middle panel */
+/* 
+.toolbar>DIV:nth-child(2):hover DIV * {
+    display: inline-flex;
+} 
+*/
+
+.toolbar>DIV:last-child {
+    opacity: 1;
+    justify-content: flex-end;
+}
+
+.toolbar:hover {
+    opacity: 1;
+}
+
+.toolbar .button:hover {
+    border-color: var(--color_lines);
+}
+
+.menutrigger:active,
+.toolbar:hover .button:active {
+    background-color: var(--color_ui_active);
+}
+
+.toolbar>DIV:first-child {
+    display: inline-flex;
+    cursor: default;
+}
+
+.toolbar #fullscreen {
+    margin-left: 16px;
+    right: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: var(--border-radius);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    border: var(--halfpixel) var(--line_style) var(--color_lines);
+}
+
+.toolbar #listtrigger,
+.toolbar #fullscreen {
+    z-index: 4;
+    position: relative;
+}
+
+.toolbar .separator {
+    display: flex;
+    border: var(--color_lines) var(--halfpixel) dashed;
+    height: 72%;
+    margin-top: 6px;
+}

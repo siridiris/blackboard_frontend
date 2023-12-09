@@ -1,0 +1,221 @@
+.towerbutton {
+    display: inline-flex;
+    border: var(--halfpixel) var(--color_lines) solid;
+    border-radius: var(--border-radius);
+    background-size: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 8px;
+    min-width: 24px;
+    cursor: pointer;
+    text-align: center;
+    /*
+    background-color: transparent;
+    border: 0;
+    */
+    transition: .3s background;
+    font-size: 10pt;
+}
+
+.towerbutton:active,
+.towerbutton[checked="1"]:active {
+    background-color: var(--color_ui_active);
+    color: var(--color_ui_select_fore);
+    transition: .3s background;
+}
+
+.towerbutton.disabled {
+    cursor: default;
+    background-color: inherit;
+    border-style: dashed;
+    filter: grayscale(1);
+    mix-blend-mode: multiply;
+    color: #8888;
+}
+
+.towerbutton.disabled:hover {
+    background-color: var(--transparent);
+    /* cursor: not-allowed; */
+}
+
+.triggerup {
+    background-image: var(--icon_goto_toc);
+}
+
+.triggerup::after {
+    content: var(--icon_cross_small);
+    position: absolute;
+    margin-left: 12px;
+    margin-top: -7px;
+    filter: drop-shadow(0px 0px 1px var(--color_font));
+}
+
+.triggerdown {
+    background-image: var(--icon_goto_toc);
+}
+
+/* .triggerdown::before {
+    content: var(--icon_next);
+    position: absolute;
+    margin-left: -7px;
+    margin-top: 0;
+    filter: drop-shadow(0px 0px 1px var(--color_font));
+} */
+
+.towerbutton.diagramsbutton,
+.towerbutton.diagramsbutton[checked="0"],
+.towerbutton.diagramsbutton[checked="1"] {
+    background-image: var(--icon_diagram);
+}
+
+.towerbutton[checked="1"]::after {
+    content: var(--icon_overlay_checkmark);
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+    filter: drop-shadow(0px 0px 1px var(--color_lines));
+}
+
+.togglefavstate {
+    border-color: var(--transparent);
+    margin-right: 0;
+    margin-left: 28px;
+    background-color: var(--transparent);
+    background-image: var(--icon_check-off);
+}
+
+.togglefavstate:hover {
+    transform: scale(1.2);
+}
+
+.togglefavstate[checked="1"] {
+    background-image: var(--icon_check-on);
+    background-color: var(--transparent);
+}
+
+.togglefavstate[checked="0"] {
+    background-image: var(--icon_check-off);
+    background-color: var(--transparent);
+}
+
+.edit,
+.edit[checked="0"],
+.edit[checked="1"] {
+    background-image: var(--icon_edit);
+}
+
+
+.towerbutton.openlink {
+    background-image: var(--icon_open_link_in_new_window);
+}
+.towerbutton.openlink:hover {
+    background-image: var(--icon_open_link_in_new_window_hover);
+}
+.towerbutton.unknown_link {
+    background-image: var(--icon_search_link_in_new_window);
+}
+
+/* .towerbutton.search::after {
+    content: var(--icon_overlay_search);
+    position: absolute;
+    margin-left: 18px;
+    margin-top: 7px;
+    filter: drop-shadow(0px 0px 1px var(--color_body_back));
+} */
+
+.add {
+    background-image: var(--icon_add_off);
+}
+
+.add:hover {
+    background-image: var(--icon_add_on);
+}
+
+.lyricssearch {
+    background-image: var(--icon_lyrics_search);
+}
+
+.close {
+    background-image: var(--icon_close);
+}
+.save_to_database{
+    background-image: var(--icon_save_to_database);
+}
+.revert {
+    background-image: var(--icon_revert);
+}
+
+.toolbarx .towerbutton.add {
+    margin-left: 32px;
+}
+
+.towerbutton:hover {
+    opacity: 1;
+    /* background-color: var(--color_ui_hover_back); */
+}
+
+/*
+.towerbutton.ui,
+.towerbutton.towerbutton.fullscreenbutton {
+    min-width: 16px;
+}
+*/
+
+
+.towerbutton[checked="1"] {
+    color: var(--color_ui_select_back);
+}
+
+.towerbutton.fullscreenbutton[checked="0"],
+.towerbutton.fullscreenbutton {
+    background-image: var(--icon_fullscreen_enter);
+}
+
+.towerbutton.fullscreenbutton[checked="1"] {
+    background-image: var(--icon_fullscreen_exit);
+}
+
+.towerbutton.listmanagertrigger::after,
+.towerbutton.togglefavstate[checked="1"]::after,
+.towerbutton.fullscreenbutton[checked="1"]::after {
+    content: '';
+}
+
+.towerbutton.listmanagershow {
+    background-image: var(--icon_listmanager_show);
+}
+
+.towerbutton.listmanagerhide {
+    background-image: var(--icon_listmanager_hide);
+}
+
+.towerbutton.inserttabbutton {
+    background-image: var(--icon_inserttab);
+}
+
+.towerbutton.towerbutton.formatbutton,
+.towerbutton.towerbutton.openothersite {
+    position: absolute;
+    background-color: var(--color_body_back);
+    border: var(--halfpixel) dashed var(--color_lines);
+    z-index: 10;
+    padding: 2px;
+}
+
+.towerbutton.formatbutton {
+    background-image: var(--icon_magic_wand);
+    top: 107px;
+    right: 11px;
+}
+
+.towerbutton.openothersite {
+    background-image: var(--icon_search);
+    right: 11px;
+    top: 42px;
+}
+
+.towerbutton.towerbutton.formatbutton:hover,
+.towerbutton.towerbutton.openothersite:hover {
+    background-color: color-mix(in oklab, var(--color_body_back), white 20%);
+    border: var(--halfpixel) solid var(--color_lines);
+}

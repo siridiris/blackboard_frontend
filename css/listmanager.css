@@ -1,0 +1,91 @@
+.listmanager {
+    position: absolute;
+    z-index: 19;
+    border-radius: 0;
+    margin: auto 0;
+    top: 0;
+    right: 0;
+    left: 100%;
+    bottom: 0;
+    background: var(--color_body_back);
+    filter: drop-shadow(0 0 2px var(--color_lines));
+    border-left: 0;
+    background-position: center 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: left var(--animation_duration);
+    box-sizing: border-box;
+}
+
+.listmanager .itemlistcontainer {
+    filter: brightness(1.05);
+    background: var(--color_body_back);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center 100px;
+}
+
+.listmanager .itemlistcontainer .itemlist {
+    border-bottom: 0;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100% - 16px);
+    min-width: max-content;
+    column-count: 1;
+}
+
+
+
+.listmanager .itemlistcontainer .itemlist .item {
+    transition: all .25s;
+}
+
+
+.listmanager .itemlistcontainer .itemlist .item .favourite-on {
+    background-image: none;
+
+}
+
+.listmanager .itemlistcontainer .itemlist .item:hover .favourite-on {
+    /* replace favicon star symbol by cross in th listmanager*/
+    background-image: var(--icon_cross_small);
+    background-position: center;
+}
+
+.listmanager .itemlistcontainer .itemlist .item:hover DIV:first-child {
+    display: block;
+}
+
+.listmanager .statusbar .panel {
+    padding-left: 20px;
+}
+
+#TOC .itemlist:empty::before {
+    content: 'Nothing Here...';
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: small;
+    margin-top: 10px;
+    margin-left: 10px;
+    white-space: wrap;
+    width: 280px;
+    line-height: 24px;
+    white-space: pre;
+    opacity: .5;
+    color: var(--color_error);
+}
+
+ .listmanager .itemlist:empty::before {
+    content: 'Drop Pages Here To Add Them To This List';
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: small;
+    margin-top: 10px;
+    margin-left: 10px;
+    white-space: wrap;
+    width: 280px;
+    line-height: 24px;
+    white-space:pre;
+    opacity: .5;
+} 

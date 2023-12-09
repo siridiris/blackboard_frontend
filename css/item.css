@@ -1,0 +1,104 @@
+.itemlistcontainer .itemlist .item {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    position: relative;
+    border-radius: var(--border-radius);
+    margin-bottom: 8px;
+}
+
+.itemlistcontainer .itemlist .item.subtitle {
+    max-width: 100%;
+    padding: 8px;
+    line-height: 20px;
+    background-position: calc(100% - 0px) center;
+    font-weight: bold;
+}
+
+.itemlistcontainer .itemlist .item.subtitle:hover {
+    opacity: 1 !important;
+    font-weight: bold;
+}
+
+.itemlistcontainer .itemlist .item.selected,
+.itemlistcontainer .itemlist .item.selected:hover {
+    background-color: var(--color_active);
+}
+
+.itemlistcontainer .itemlist .item.selected {
+    cursor: default;
+    color: var(--color_ui_select_fore);
+}
+
+.itemlistcontainer .itemlist .item.selected:hover .href {
+    color: var(--color_ui_select_fore)
+}
+
+.itemlistcontainer .itemlist .item .favourite-none,
+.itemlistcontainer .itemlist .item .favourite-off,
+.itemlistcontainer .itemlist .item .favourite-on {
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: var(--border-radius);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 6px;
+    opacity: .75;
+    margin: 8px 0;
+}
+
+.itemlistcontainer .itemlist .item .favourite-none {
+    background-image: var(--icon_check-none);
+    opacity: 0;
+}
+
+.itemlistcontainer .itemlist .item .favourite-on {
+    background-image: var(--icon_check-on);
+}
+
+.itemlistcontainer .itemlist .item .favourite-off {
+    background-image: var(--icon_check-off);
+    opacity: .5;
+}
+
+.itemlistcontainer .itemlist .item .favourite-none:hover,
+.itemlistcontainer .itemlist .item .favourite-off:hover,
+.itemlistcontainer .itemlist .item .favourite-on:hover {
+    opacity: 1;
+    transition: all 100ms linear;
+}
+
+.itemlistcontainer .itemlist .item .href {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 8px;
+}
+
+.itemlistcontainer .itemlist .item .favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 50%;
+    line-height: 20px;
+    margin-top: 2px;
+    float: inline-start;
+    border: var(--halfpixel) var(--color_lines) solid;
+    background: transparent;
+}
+
+.itemlistcontainer .itemlist .item:hover {
+    background-color: color-mix(in oklab,white,var(--color_ui_hover_back));
+}
+
+.itemlistcontainer .itemlist .item:hover .favicon {
+    background-color: var(--transparent);
+}
+
+.itemlistcontainer .itemlist .item:has(.favourite-on){
+    background-color: red !important;
+}

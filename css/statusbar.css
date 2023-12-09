@@ -1,0 +1,29 @@
+.statusbar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color_body_back);
+    border-top: var(--halfpixel) var(--line_style) var(--color_lines);
+    text-align: left;
+    padding: 4px 4px 4px 16px;
+    font-size: 10pt;
+    height: 20px;
+    line-height: 8px;
+    color: var(--color_font);
+    z-index: 20000;
+}
+
+.statusbar .panel {
+    padding-left: 40px;
+    line-height: 28px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 10pt;
+    background-color: var(--color_bars_back);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}

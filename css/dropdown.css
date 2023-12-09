@@ -1,0 +1,61 @@
+.dropdowncontrol {
+    /* background: color-mix(in oklab, var(--color_bars_back), var(--color_bars_back)); */
+    border-radius: var(--border-radius);
+    width: 100%;
+    width: -moz-available;          /* WebKit-based browsers will ignore this. */
+    width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    width: fill-available;
+}
+
+.dropdowncontrol .subtitle {
+    cursor: pointer;
+    margin-left: 10px;
+    opacity: .75;
+    max-width: 180px;
+    overflow: clip;
+    text-overflow: ellipsis;
+}
+
+.dropdowncontrol .itemlistcontainer {
+    position: absolute;
+    z-index: 100000;
+    bottom: 0;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist {
+    background-color: color-mix(in oklab, var(--color_body_back), var(--color_bars_back));
+    column-count: 1;
+    background-image: none;
+    background-repeat: repeat;
+    width: 100%;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist::after {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    content: '⎯ ⎯ ⎯ * ⎯ ⎯ ⎯';
+    font-size: 1em;
+    opacity: .2;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist .item {
+    font-weight: bold;
+    font-variant-caps: petite-caps;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist .item DIV:first-child {
+    background-image: none;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist .item {
+    display: flex;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist .item:active {
+    cursor: grab;
+}
+
+.dropdowncontrol .itemlistcontainer .itemlist .item.selected {
+    background-color: var(--color_active);
+}

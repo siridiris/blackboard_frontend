@@ -1,0 +1,67 @@
+.part {
+    width: 100%;
+    font-size: var(--fontsize);
+}
+
+.part.section {
+    color: blue
+}
+
+.part.CODE .section {
+    background-color: var(--color_body_back);
+    color: var(--color_codefont);
+    padding: 8px 4px;
+}
+
+.part.DEFINITIE {
+    color: rebeccapurple;
+
+}
+
+.part.SCRIPT {
+    color: maroon;
+}
+
+.uppercase {
+    color: deeppink;
+    font-weight: bold;
+}
+
+.section span {
+    /* outline: 1px solid silver; */
+    border-radius: 3px;
+    line-height: 20px;
+
+}
+
+.section HR {
+    height: 0px;
+    border: 0;
+    border-top: 1px dashed silver;
+}
+
+.keyword {
+    background-color: lightyellow;
+    font-weight: bold;
+    outline: 2px solid lightyellow;
+    border-radius: 3px;
+    ;
+}
+
+.hyperlink {
+    color: rgb(27, 111, 208);
+    cursor: pointer;
+}
+
+.hyperlink:hover {
+    background-color: #FFF9;
+    text-decoration: underline;
+    ;
+}
+
+
+.part.CODE .keyword {
+    background-color: #0000008c;
+    outline: 2px solid #0000008c;
+    color: var(--color_body_back);
+}

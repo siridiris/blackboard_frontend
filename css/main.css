@@ -1,0 +1,50 @@
+body {
+    background-color: var(--color_body_back);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    line-height: inherit;
+    font-weight: normal;
+    font-style: normal;
+    color: var(--color_font);
+    font-size: 12pt;
+    font-family: var(--font_family);
+    margin: 0;
+}
+.highlight {
+    background-color: var(--color_match_mark_back);
+    color: var(--color_match_mark_fore);
+    border-radius: 2px;
+    text-decoration-color: var(--color_match_mark_fore);
+    padding: 2px 0 0 0;
+}
+
+.dropshadow {
+    -webkit-box-shadow: var(--dropshadow);
+    -moz-box-shadow: var(--dropshadow);
+    box-shadow: var(--dropshadow);
+}
+
+.unselectable {
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;  
+}
+
+.beingdraggedover {
+    background-color: white;
+}
+
+/* selection coloring */
+::selection,
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--color_body_back);
+    background: var(--color_font);
+}
+
+input::placeholder {
+    color: var(--color_font);
+    font-size: smaller;
+}
