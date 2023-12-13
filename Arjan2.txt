@@ -1,6 +1,0 @@
-Dit is een tweede tekstbestand om toe te voegen.
-ik ga hier nu een derde regel aan toevoegen
-En een vierde
-
-Ik ga hier tijdens de olc dag een commit aan toevoegen
-En een tweede
